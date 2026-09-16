@@ -39,7 +39,6 @@ pipelines over 85,000+ learning activities and ran jobs on AWS SageMaker with Cl
 |---|---|---|
 | **[Dog Hotel Management System](https://github.com/AaronUgalde/hotel-perros)** | Full-stack monorepo for a pet-boarding business: 35-table PostgreSQL schema, 100+ REST endpoints across 16 resource modules, JWT auth with role-based access. | TypeScript · Express · React 19 · PostgreSQL |
 | **[Credit Risk Modeling & API](https://github.com/AaronUgalde/credit-risk-modeling)** | ML system taken all the way to a serving layer: reproducible feature pipeline, model selection by 5-fold CV, FastAPI service with single + batch endpoints and SHAP explanations. | Python · FastAPI · scikit-learn · SHAP |
-| **[Numeralia CDMX](https://github.com/naomirobles/hackathon_sedeco)** | Geospatial analytics platform built for Mexico City's economic development ministry at the SEDECO 2026 hackathon — spatial filtering over census and POI layers, plus a LangGraph routing agent and a LlamaIndex RAG advisor. | Python · FastAPI · GeoPandas · React · MapLibre GL |
 | **[Competitive Programming](https://github.com/AaronUgalde/Competitive_Programming)** | 600+ solved problems across Codeforces, AtCoder and CSES, with the C++ template and stress-testing script I use in contests. | C++ · Python |
 
 ---
