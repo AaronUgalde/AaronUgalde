@@ -75,11 +75,11 @@ I bring to contests.
 ### Lately
 
 <!-- recent:start -->
-- [pictograms-annotator](https://github.com/AaronUgalde/pictograms-annotator) <sub>Python · yesterday</sub>
+- [pictograms-annotator](https://github.com/AaronUgalde/pictograms-annotator) <sub>Python · today</sub>
+- [MetroAR-CDMX](https://github.com/AaronUgalde/MetroAR-CDMX) <sub>Kotlin · today</sub>
 - [Proyecto-Paralelo](https://github.com/AaronUgalde/Proyecto-Paralelo) <sub>TeX · 4 days ago</sub>
 - [reactor-http](https://github.com/AaronUgalde/reactor-http) <sub>C · 16 days ago</sub>
 - [picto_xp3](https://github.com/AaronUgalde/picto_xp3) <sub>Python · 19 days ago</sub>
-- [Competitive_Programming](https://github.com/AaronUgalde/Competitive_Programming) <sub>C++ · Sep 2026</sub>
 <!-- recent:end -->
 
 <sub>The list above is updated by <a href="./.github/workflows/update-readme.yml">a small workflow</a> in this repo.</sub>
