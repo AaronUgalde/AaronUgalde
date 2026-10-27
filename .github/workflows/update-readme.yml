@@ -1,4 +1,4 @@
-# Refreshes the "Lately" section of the profile README from my recent public repos.
+# Refreshes the "Lately" section and the Codeforces card in the profile README.
 name: Update README
 
 on:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [".github/scripts/update_readme.py", ".github/workflows/update-readme.yml"]
+    paths: [".github/scripts/**", ".github/workflows/update-readme.yml"]
 
 permissions:
   contents: write
@@ -31,10 +31,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Draw Codeforces card
+        continue-on-error: true  # keep yesterday's card if the Codeforces API is down
+        run: python .github/scripts/codeforces_card.py assets
+
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "chore: refresh recent activity" || exit 0
+          git add README.md assets/codeforces-*.svg
+          git commit -m "chore: refresh recent activity and Codeforces card" || exit 0
           git push
