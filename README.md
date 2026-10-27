@@ -24,16 +24,22 @@ I'm open to relocating.
 
 ### Things I've built
 
-**[MetroAR-CDMX](https://github.com/AaronUgalde/MetroAR-CDMX)** · Kotlin, Jetpack Compose<br>
-Point your phone around and see which way to walk to the nearest Metro, Metrobús or train
-station in Mexico City. I wrote the AR math myself (Haversine bearings, projection with the
-camera's real field of view, sensor smoothing that doesn't spin at 359° → 0°) and a pipeline
-that turns the city's GTFS feed into an offline dataset of 1,000 stations across 36 lines.
+#### 🚇 [MetroAR-CDMX](https://github.com/AaronUgalde/MetroAR-CDMX)
+
+<p><img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin"> <img src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose"> <img src="https://img.shields.io/badge/Android-34A853?style=flat-square&logo=android&logoColor=white" alt="Android"> <img src="https://img.shields.io/badge/CameraX-30363D?style=flat-square" alt="CameraX"> <img src="https://img.shields.io/badge/GTFS-30363D?style=flat-square" alt="GTFS"> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions"></p>
+
+Point your phone around and the app shows which way to walk to the nearest Metro, Metrobús or
+train station, with its line color, distance and walking time. Works offline.
+
+- I wrote the AR math by hand: Haversine bearings, projection with the camera's **real field of
+  view** read from the lens, and sensor smoothing that doesn't spin when the compass goes 359° → 0°.
+- A Node script turns the city's GTFS feed into **1,000 stations across 36 lines**, refreshed every
+  month by GitHub Actions. **38 unit tests** on the domain layer.
 
 <p>
-  <img src="https://raw.githubusercontent.com/AaronUgalde/MetroAR-CDMX/main/docs/screenshots/ar-view.jpg" width="150" alt="MetroAR camera view with station markers">
-  <img src="https://raw.githubusercontent.com/AaronUgalde/MetroAR-CDMX/main/docs/screenshots/navigation.jpg" width="150" alt="MetroAR walking navigation">
-  <img src="https://raw.githubusercontent.com/AaronUgalde/MetroAR-CDMX/main/docs/screenshots/map.jpg" width="150" alt="MetroAR offline map">
+  <img src="https://raw.githubusercontent.com/AaronUgalde/MetroAR-CDMX/main/docs/screenshots/ar-view.jpg" width="160" alt="MetroAR camera view with station markers">
+  <img src="https://raw.githubusercontent.com/AaronUgalde/MetroAR-CDMX/main/docs/screenshots/navigation.jpg" width="160" alt="MetroAR walking navigation">
+  <img src="https://raw.githubusercontent.com/AaronUgalde/MetroAR-CDMX/main/docs/screenshots/map.jpg" width="160" alt="MetroAR offline map">
 </p>
 
 <details>
@@ -47,11 +53,16 @@ that turns the city's GTFS feed into an offline dataset of 1,000 stations across
 
 </details>
 
-**[reactor-http](https://github.com/AaronUgalde/reactor-http)** · C<br>
-An HTTP/1.1 server in ~1,700 lines of C with no dependencies. Reactor pattern, one epoll/kqueue
-loop per core, `sendfile` for static files. Holds 10,000 concurrent connections on my laptop and
-passes its test suite under ASan/UBSan. The most fun bug was kqueue handing me a read and a
-write event for the same connection in one batch, right after I'd freed it.
+#### ⚡ [reactor-http](https://github.com/AaronUgalde/reactor-http)
+
+<p><img src="https://img.shields.io/badge/C11-5C6BC0?style=flat-square&logo=c&logoColor=white" alt="C11"> <img src="https://img.shields.io/badge/epoll-30363D?style=flat-square" alt="epoll"> <img src="https://img.shields.io/badge/kqueue-30363D?style=flat-square" alt="kqueue"> <img src="https://img.shields.io/badge/pthreads-30363D?style=flat-square" alt="pthreads"> <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux"> <img src="https://img.shields.io/badge/macOS-000000?style=flat-square&logo=apple&logoColor=white" alt="macOS"></p>
+
+An HTTP/1.1 server in ~1,700 lines of C, no dependencies, one event loop per core.
+
+- Held **10,000 concurrent connections** on my laptop and does ~200k req/s on loopback.
+- Passes its parser and integration tests under **ASan/UBSan**.
+- Favorite bug: kqueue handed me a read and a write event for the same connection in one batch,
+  right after I'd freed it.
 
 <details>
 <summary>How it's put together</summary>
@@ -71,35 +82,78 @@ so one big download can't starve everyone else on that core.
 
 </details>
 
-**[cv-tailor-mcp](https://github.com/AaronUgalde/cv-tailor-mcp)** · Python · [PyPI](https://pypi.org/project/cv-tailor-mcp/)<br>
-An MCP server that lets Claude Code or Cursor tailor a one-page LaTeX CV to a job posting.
-It tries three spacing profiles until the PDF fits one page and turns `pdflatex` noise into
-diagnostics an agent can act on. I wrote it because I was tired of doing that by hand.
+#### 🧾 [cv-tailor-mcp](https://github.com/AaronUgalde/cv-tailor-mcp) <a href="https://pypi.org/project/cv-tailor-mcp/"><img src="https://img.shields.io/pypi/v/cv-tailor-mcp?style=flat-square&label=pypi" alt="PyPI version" align="right"></a>
 
-**[credit-risk-modeling](https://github.com/AaronUgalde/credit-risk-modeling)** · Python, FastAPI<br>
-Credit default model over 32k loan applications, taken past the notebook: custom scikit-learn
-transformers, model selection by stratified CV (random forest, AUC 0.934), SHAP explanations per
-request, and a FastAPI service with batch scoring.
+<p><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/MCP-1F2328?style=flat-square&logo=modelcontextprotocol&logoColor=white" alt="MCP"> <img src="https://img.shields.io/badge/Pydantic-E92063?style=flat-square&logo=pydantic&logoColor=white" alt="Pydantic"> <img src="https://img.shields.io/badge/Jinja-B41717?style=flat-square&logo=jinja&logoColor=white" alt="Jinja"> <img src="https://img.shields.io/badge/LaTeX-008080?style=flat-square&logo=latex&logoColor=white" alt="LaTeX"></p>
 
-**[hotel-perros](https://github.com/AaronUgalde/hotel-perros)** · TypeScript, PostgreSQL<br>
-Management system for a dog hotel. 35-table schema, 100+ REST endpoints in a layered Express
-backend, JWT auth with roles, and a React front end with a reservation calendar.
+An MCP server that lets Claude Code or Cursor tailor a one-page LaTeX CV to a job posting. It
+tries three spacing profiles until the PDF fits on one page and turns `pdflatex` noise into
+errors an agent can actually act on. I wrote it because I was tired of doing that loop by hand.
 
-**[finetuning_t5_flant5_mt5_en2picto](https://github.com/AaronUgalde/finetuning_t5_flant5_mt5_en2picto)** + **[pictograms-annotator](https://github.com/AaronUgalde/pictograms-annotator)** · Python<br>
-Translating sentences into ARASAAC pictograms for augmentative communication. I fine-tuned
-T5, FLAN-T5 and mT5 for English → pictograms, then built a web app so a whole class can annotate
-more training data.
+#### More projects
 
-**[esp32-cam-pet-bowl](https://github.com/AaronUgalde/esp32-cam-pet-bowl)** · C++, Python<br>
-A patrol robot that checks on a pet's food bowl. ESP32 + Arduino over UART, a CNN on
-ESP32-CAM frames, and a Telegram alert when something's off.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-**[RAG-temarios](https://github.com/AaronUgalde/RAG-temarios)** · Python<br>
-Ask questions about ESCOM's syllabi in plain Spanish. FAISS, MiniLM embeddings, Streamlit.
+**[credit-risk-modeling](https://github.com/AaronUgalde/credit-risk-modeling)**
 
-**[Competitive_Programming](https://github.com/AaronUgalde/Competitive_Programming)** · C++<br>
-600+ accepted solutions from Codeforces, AtCoder and CSES, plus the template and stress tester
-I bring to contests.
+<p><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"> <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn"> <img src="https://img.shields.io/badge/SHAP-30363D?style=flat-square" alt="SHAP"></p>
+
+Default prediction over 32k loans, taken past the notebook: random forest at **AUC 0.934**, SHAP reasons per request, and a FastAPI service with batch scoring.
+
+</td>
+<td width="50%" valign="top">
+
+**[hotel-perros](https://github.com/AaronUgalde/hotel-perros)**
+
+<p><img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"> <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express"> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"> <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT"></p>
+
+Management system for a dog hotel: **35-table** schema, **100+ endpoints** in a layered backend, roles, and a reservation calendar.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[Pictogram translation](https://github.com/AaronUgalde/finetuning_t5_flant5_mt5_en2picto)**
+
+<p><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch"> <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face"></p>
+
+Fine-tuned T5, FLAN-T5 and mT5 to turn sentences into ARASAAC pictograms, then built an [annotation app](https://github.com/AaronUgalde/pictograms-annotator) so a whole class can label more data.
+
+</td>
+<td width="50%" valign="top">
+
+**[esp32-cam-pet-bowl](https://github.com/AaronUgalde/esp32-cam-pet-bowl)**
+
+<p><img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++"> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow"> <img src="https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white" alt="ESP32"> <img src="https://img.shields.io/badge/Arduino-00878F?style=flat-square&logo=arduino&logoColor=white" alt="Arduino"> <img src="https://img.shields.io/badge/Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="Telegram"></p>
+
+A patrol robot that checks a pet's food bowl: four boards talking over WebSockets and UART, a CNN on camera frames, and a Telegram alert.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[RAG-temarios](https://github.com/AaronUgalde/RAG-temarios)**
+
+<p><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/FAISS-0467DF?style=flat-square&logo=meta&logoColor=white" alt="FAISS"> <img src="https://img.shields.io/badge/sentence--transformers-30363D?style=flat-square" alt="sentence-transformers"> <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit"></p>
+
+Ask questions about ESCOM's syllabi in plain Spanish and get answers grounded in the actual PDFs.
+
+</td>
+<td width="50%" valign="top">
+
+**[Competitive_Programming](https://github.com/AaronUgalde/Competitive_Programming)**
+
+<p><img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++"> <img src="https://img.shields.io/badge/Codeforces-1F8ACB?style=flat-square&logo=codeforces&logoColor=white" alt="Codeforces"> <img src="https://img.shields.io/badge/AtCoder-30363D?style=flat-square" alt="AtCoder"></p>
+
+600+ accepted solutions plus the template and stress tester I bring to contests. Rating history below.
+
+</td>
+</tr>
+</table>
 
 <a href="https://codeforces.com/profile/LicAaron">
   <picture>
@@ -107,6 +161,10 @@ I bring to contests.
     <img alt="Codeforces LicAaron: rating history and solved problems by difficulty" src="./assets/codeforces-light.svg" width="100%">
   </picture>
 </a>
+
+### Toolbox
+
+<p><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++"> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"> <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin"> <img src="https://img.shields.io/badge/SQL-30363D?style=flat-square" alt="SQL"> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"> <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express"> <img src="https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"> <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js"> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"> <img src="https://img.shields.io/badge/PostGIS-30363D?style=flat-square" alt="PostGIS"> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"> <img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" alt="Airflow"> <img src="https://img.shields.io/badge/Databricks-FF3621?style=flat-square&logo=databricks&logoColor=white" alt="Databricks"> <img src="https://img.shields.io/badge/AWS_SageMaker-232F3E?style=flat-square" alt="AWS SageMaker"> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch"> <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face"> <img src="https://img.shields.io/badge/sentence--transformers-30363D?style=flat-square" alt="sentence-transformers"> <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn"> <img src="https://img.shields.io/badge/SHAP-30363D?style=flat-square" alt="SHAP"> <img src="https://img.shields.io/badge/FAISS-0467DF?style=flat-square&logo=meta&logoColor=white" alt="FAISS"> <img src="https://img.shields.io/badge/NetworkX-30363D?style=flat-square" alt="NetworkX"></p>
 
 ### Lately
 
@@ -119,13 +177,3 @@ I bring to contests.
 <!-- recent:end -->
 
 <sub>This list and the Codeforces card are refreshed daily by <a href="./.github/workflows/update-readme.yml">a small workflow</a> in this repo.</sub>
-
-<details>
-<summary><sub>Tools I reach for</sub></summary>
-<br>
-
-Python, C++, TypeScript, SQL, Kotlin. FastAPI, Express, Next.js, React. PostgreSQL and PostGIS,
-Docker, Airflow, Databricks, AWS SageMaker. PyTorch, Hugging Face, sentence-transformers,
-scikit-learn, SHAP, FAISS, NetworkX.
-
-</details>
