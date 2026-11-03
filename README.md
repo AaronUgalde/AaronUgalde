@@ -169,11 +169,11 @@ Ask questions about ESCOM's syllabi in plain Spanish and get answers grounded in
 ### Lately
 
 <!-- recent:start -->
-- [pictograms-annotator](https://github.com/AaronUgalde/pictograms-annotator) <sub>Python · 6 days ago</sub>
-- [MetroAR-CDMX](https://github.com/AaronUgalde/MetroAR-CDMX) <sub>Kotlin · 6 days ago</sub>
-- [Proyecto-Paralelo](https://github.com/AaronUgalde/Proyecto-Paralelo) <sub>TeX · 10 days ago</sub>
-- [reactor-http](https://github.com/AaronUgalde/reactor-http) <sub>C · 22 days ago</sub>
-- [picto_xp3](https://github.com/AaronUgalde/picto_xp3) <sub>Python · 25 days ago</sub>
+- [pictograms-annotator](https://github.com/AaronUgalde/pictograms-annotator) <sub>Python · 7 days ago</sub>
+- [MetroAR-CDMX](https://github.com/AaronUgalde/MetroAR-CDMX) <sub>Kotlin · 7 days ago</sub>
+- [Proyecto-Paralelo](https://github.com/AaronUgalde/Proyecto-Paralelo) <sub>TeX · 11 days ago</sub>
+- [reactor-http](https://github.com/AaronUgalde/reactor-http) <sub>C · 23 days ago</sub>
+- [picto_xp3](https://github.com/AaronUgalde/picto_xp3) <sub>Python · 26 days ago</sub>
 <!-- recent:end -->
 
 <sub>This list and the Codeforces card are refreshed daily by <a href="./.github/workflows/update-readme.yml">a small workflow</a> in this repo.</sub>
