@@ -169,9 +169,9 @@ Ask questions about ESCOM's syllabi in plain Spanish and get answers grounded in
 ### Lately
 
 <!-- recent:start -->
-- [pictograms-annotator](https://github.com/AaronUgalde/pictograms-annotator) <sub>Python · 14 days ago</sub>
-- [MetroAR-CDMX](https://github.com/AaronUgalde/MetroAR-CDMX) <sub>Kotlin · 14 days ago</sub>
-- [Proyecto-Paralelo](https://github.com/AaronUgalde/Proyecto-Paralelo) <sub>TeX · 18 days ago</sub>
+- [pictograms-annotator](https://github.com/AaronUgalde/pictograms-annotator) <sub>Python · 15 days ago</sub>
+- [MetroAR-CDMX](https://github.com/AaronUgalde/MetroAR-CDMX) <sub>Kotlin · 15 days ago</sub>
+- [Proyecto-Paralelo](https://github.com/AaronUgalde/Proyecto-Paralelo) <sub>TeX · 19 days ago</sub>
 - [reactor-http](https://github.com/AaronUgalde/reactor-http) <sub>C · Oct 2026</sub>
 - [picto_xp3](https://github.com/AaronUgalde/picto_xp3) <sub>Python · Oct 2026</sub>
 <!-- recent:end -->
