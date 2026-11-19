@@ -170,10 +170,10 @@ Ask questions about ESCOM's syllabi in plain Spanish and get answers grounded in
 
 <!-- recent:start -->
 - [Proyecto-Paralelo](https://github.com/AaronUgalde/Proyecto-Paralelo) <sub>TeX · today</sub>
-- [portafolio](https://github.com/AaronUgalde/portafolio) <sub>HTML · 2 days ago</sub>
-- [SalonesLibresESCOM](https://github.com/AaronUgalde/SalonesLibresESCOM) <sub>Kotlin · 2 days ago</sub>
-- [kwcasa](https://github.com/AaronUgalde/kwcasa) <sub>C · 2 days ago</sub>
-- [pictograms-annotator](https://github.com/AaronUgalde/pictograms-annotator) <sub>Python · 22 days ago</sub>
+- [portafolio](https://github.com/AaronUgalde/portafolio) <sub>HTML · 3 days ago</sub>
+- [SalonesLibresESCOM](https://github.com/AaronUgalde/SalonesLibresESCOM) <sub>Kotlin · 3 days ago</sub>
+- [kwcasa](https://github.com/AaronUgalde/kwcasa) <sub>C · 3 days ago</sub>
+- [pictograms-annotator](https://github.com/AaronUgalde/pictograms-annotator) <sub>Python · 23 days ago</sub>
 <!-- recent:end -->
 
 <sub>This list and the Codeforces card are refreshed daily by <a href="./.github/workflows/update-readme.yml">a small workflow</a> in this repo.</sub>
