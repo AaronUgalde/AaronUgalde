@@ -169,10 +169,10 @@ Ask questions about ESCOM's syllabi in plain Spanish and get answers grounded in
 ### Lately
 
 <!-- recent:start -->
-- [pictograms-annotator](https://github.com/AaronUgalde/pictograms-annotator) <sub>Python · 3 days ago</sub>
-- [Proyecto-Paralelo](https://github.com/AaronUgalde/Proyecto-Paralelo) <sub>TeX · 7 days ago</sub>
-- [portafolio](https://github.com/AaronUgalde/portafolio) <sub>HTML · 10 days ago</sub>
-- [SalonesLibresESCOM](https://github.com/AaronUgalde/SalonesLibresESCOM) <sub>Kotlin · 10 days ago</sub>
+- [pictograms-annotator](https://github.com/AaronUgalde/pictograms-annotator) <sub>Python · 4 days ago</sub>
+- [Proyecto-Paralelo](https://github.com/AaronUgalde/Proyecto-Paralelo) <sub>TeX · 8 days ago</sub>
+- [portafolio](https://github.com/AaronUgalde/portafolio) <sub>HTML · 11 days ago</sub>
+- [SalonesLibresESCOM](https://github.com/AaronUgalde/SalonesLibresESCOM) <sub>Kotlin · 11 days ago</sub>
 - [kwcasa](https://github.com/AaronUgalde/kwcasa) <sub>C · 11 days ago</sub>
 <!-- recent:end -->
 
